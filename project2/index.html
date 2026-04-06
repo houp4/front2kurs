@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Анимация по траектории</title>
+    <script src="d3.v7.min.js"></script>
+    <script src="JavaScript/image.js"></script>
+    <script src="JavaScript/path.js"></script>
+    <script src="JavaScript/main.js"></script>
+</head>
+<body>
+
+<form id="setting">
+    <p><b>Время анимации (мс)</b><br>
+        <input type="number" id="duration" value="6000" min="1000" max="20000" step="500">
+    </p>
+    
+    <p>
+        <b>Масштаб:</b><br>
+        Начальный: <input type="number" id="scaleStart" value="1" step="0.1">
+        Конечный: <input type="number" id="scaleEnd" value="2" step="0.1">
+    </p>
+    
+    <p>
+        <b>Вращение:</b><br>
+        Начальный угол: <input type="number" id="rotateStart" value="0" step="45">
+        Конечный угол: <input type="number" id="rotateEnd" value="360" step="45">
+    </p>
+    
+    <p>
+        <input type="button" value="Анимировать" id="animateBtn">
+        <input type="button" value="Очистить" id="clearBtn">
+    </p>
+</form>
+
+<svg></svg>
+
+</body>
+</html>
