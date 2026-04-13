@@ -1,0 +1,55 @@
+body
+{
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.title
+{
+    text-align: center;
+}
+
+.subtitle
+{
+    text-align: center;
+}
+
+.menu
+{
+    list-style-type: circle;
+}
+
+.menu a
+{
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.line
+{
+    width: 100%;
+    height: 2px;
+    background: gray;
+    border: none;
+}
+
+table
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td
+{
+    border: 1px solid black;
+}
+
+th, td
+{
+    padding: 8px;
+}
+
+.footer
+{
+    text-align: center;
+}

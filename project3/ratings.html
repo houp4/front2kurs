@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>АвтоРейтинг - Список лучших машин</title>
+    <link rel="stylesheet" href="CSS/style_rating.css">
+    <script src="d3.v7.min.js"></script>
+    <script src="JavaScript/data.js"></script>
+    <script src="JavaScript/table.js"></script>
+    <script src="JavaScript/filter.js"></script>
+    <script src="JavaScript/sort.js"></script>
+    <script src="JavaScript/chart.js"></script>
+    <script src="JavaScript/main.js"></script>
+
+</head>
+
+<body>
+
+<h1 class="title">АвтоРейтинг</h1>
+<hr class="line">
+
+<ul class="menu">
+    <li><a href="index.html">Главная</a></li>
+</ul>
+
+<hr class="line">
+
+<h2 class="subtitle">Рейтинг автомобилей</h2>
+
+<details>
+    <summary><b>График</b></summary>
+    <form id="chart-form">
+
+        <b>Значение по оси ОХ</b><br>
+        <label><input type="radio" name="x_axis" value="Тип" checked> Тип</label><br>
+        <label><input type="radio" name="x_axis" value="Страна"> Страна</label><br><br>
+
+        <div id="oy-group" class="form-group">
+            <b>Результат</b><br>
+            <label><input type="checkbox" name="min_power"> Минимальная мощность</label><br>
+            <label><input type="checkbox" name="avg_power"> Средняя мощность</label><br>
+            <label><input type="checkbox" name="max_power"> Максимальная мощность</label><br>
+            <label><input type="checkbox" name="avg_rating"> Средний рейтинг</label><br><br>
+        </div>
+        <div id="oy-error" class="error-message" style="display: none; color: red;"></div>
+
+        <b>Тип диаграммы</b><br>
+        <label><input type="radio" name="chart_type" value="bar" checked> Столбчатая</label><br>
+        <label><input type="radio" name="chart_type" value="scatter"> Точечная</label><br>
+        <label><input type="radio" name="chart_type" value="line"> Линейный график</label><br><br>
+
+        <input type="button" id="buildChartBtn" value="Построить график">
+        <br></br>
+
+    </form>
+
+    <svg width="800" height="400" style="border: 1px solid #ccc;"></svg>
+
+    
+    
+</details>
+
+<details>
+
+<summary><b>Фильтр</b></summary>
+
+<form id="filter-form">
+
+<label>Модель:</label><br>
+<input type="text" id="model"><br><br>
+
+<label>Тип кузова:</label><br>
+<input type="text" id="type"><br><br>
+
+<label>Страна:</label><br>
+<input type="text" id="country"><br><br>
+
+<label>Привод:</label><br>
+<input type="text" id="drive"><br><br>
+
+Мощность (л.с.):<br>
+
+<label>от <input type="number" id="powerFrom"></label>
+<label>до <input type="number" id="powerTo"></label><br><br>
+
+Расход (л/100км):<br>
+
+<label>от <input type="number" id="consumptionFrom"></label>
+<label>до <input type="number" id="consumptionTo"></label><br><br>
+
+Цена (руб):<br>
+
+<label>от <input type="number" id="priceFrom"></label>
+<label>до <input type="number" id="priceTo"></label><br><br>
+
+Рейтинг:<br>
+
+<label>от <input type="number" id="ratingFrom"></label>
+<label>до <input type="number" id="ratingTo"></label><br><br>
+
+<input type="button" value="Найти">
+<input type="button" value="Очистить фильтры">
+
+</form>
+
+</details>
+
+<details>
+
+<summary><b>Сортировка</b></summary>
+
+<form id="sort-form">
+
+<label>Первый уровень:</label><br>
+<select id="sort1"></select>
+<label><input type="checkbox" id="sort1Desc"> по убыванию?</label><br><br>
+
+<label>Второй уровень:</label><br>
+<select id="sort2"></select>
+<label><input type="checkbox" id="sort2Desc"> по убыванию?</label><br><br>
+
+<label>Третий уровень:</label><br>
+<select id="sort3"></select>
+<label><input type="checkbox" id="sort3Desc"> по убыванию?</label><br><br>
+
+<input type="button" value="Сортировать">
+<input type="button" value="Сбросить сортировку">
+
+</form>
+
+</details>
+
+<hr class="line">
+
+<table id="list"></table>
+
+<hr class="line">
+
+<p class="footer">
+Группа: Б9123-09.03.04(3) | Разработчик: Панухник А. А.
+</p>
+
+</body>
+</html>
