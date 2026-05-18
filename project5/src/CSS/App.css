@@ -1,0 +1,144 @@
+body
+{
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.title
+{
+    text-align: center;
+}
+
+.subtitle
+{
+    text-align: center;
+}
+
+.menu
+{
+    list-style-type: circle;
+}
+
+.menu a
+{
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.line
+{
+    width: 100%;
+    height: 2px;
+    background: gray;
+    border: none;
+}
+
+table
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td
+{
+    border: 1px solid black;
+}
+
+th, td
+{
+    padding: 8px;
+}
+
+.footer
+{
+    text-align: center;
+}
+
+/* ===== „€‚‹…›… ‘’‹ „‹ €ƒ€– ===== */
+#pag
+{
+    margin: 20px 0;
+    text-align: center;
+}
+
+#pag span
+{
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+
+#pag span:hover
+{
+    background-color: #e0e0e0;
+}
+
+#pag span.active
+{
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+    font-weight: bold;
+}
+
+/* ‘β¨«¨ ¤«ο δ¨«μβΰ®Ά ¨ £ΰ δ¨ª®Ά */
+form, h4
+{
+    margin: 20px 0;
+}
+
+button
+{
+    margin-right: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+label
+{
+    margin-right: 10px;
+}
+
+input, select
+{
+    margin-right: 10px;
+    padding: 3px 5px;
+}
+
+details
+{
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+summary
+{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.error-message
+{
+    color: red;
+    margin: 10px 0;
+}
+
+.chart-panel svg
+{
+    width: 100%;
+    height: 400px;
+    border: 1px solid #ccc;
+    background: white;
+}
+
+.chart-panel
+{
+    width: 100%;
+    overflow-x: auto;
+    margin: 10px 0;
+}
